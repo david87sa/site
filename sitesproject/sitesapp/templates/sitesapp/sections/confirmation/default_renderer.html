@@ -1,0 +1,21 @@
+<div class="contents">
+    <div class="title">
+        <p>Por favor confirma tu asistencia</p>
+    </div>
+    <div class="description">
+        <p>Será en Senderos de Guarari el proximo 7 de Enero.</p>
+        <p>Revisá la ubicacion <a href="https://maps.google.com/maps/search/C.%20Las%20Moras%2C%20Alajuela%2C%20Costa%20Rica/@10.103179666238049,-84.16069887578487,17z?hl=en">acá.</a></p>
+        <form action="confirm" method="post" >
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{guest.id}}">
+            <input type="hidden" name="confirmed" value="Y">
+            <input type="submit"  value="Sí" {% if guest.confirmed == 'Y'%}class="selected"{% endif %}></input>
+        </form>
+        <form action="confirm" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{guest.id}}">
+            <input type="hidden" name="confirmed" value="N">
+            <input type="submit"  value="No voy a poder ir :("{% if guest.confirmed == 'N'%}class="selected"{% endif %}>></input>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% get_static_prefix %}/sitesapp/{{sitetheme}}/style.css"> 
+{% if sections %}
+<div id="main_container"> {% for section in sections %}
+    <div id="{{ section.name }}" class="section">
+        {% with "sitesapp/sections/"|add:section.renderer.name|add:"/"|add:section.renderer.templatePath as template %}
+        {% include template %}
+        {% endwith %}
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No se han agregado secciones.</p>
+{% endif %}

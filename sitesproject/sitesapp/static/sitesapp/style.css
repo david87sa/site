@@ -1,0 +1,23 @@
+li a {
+    color: green;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.Home {
+    border: black;
+    border-style: dashed;
+    height: 100px;
+}
+
+.Footer {
+    border: blue dashed;
+    height: 100px;
+}
+
+.content {
+    border: green dashed;
+    height: 400px;
+}

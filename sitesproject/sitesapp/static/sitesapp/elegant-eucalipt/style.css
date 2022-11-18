@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+body{
+    margin: 0;
+}
+
+img{
+    width: 100vw;
+}
+#home{
+    background-image: url('/static/sitesapp/elegant-eucalipt/home.png');
+    background-size: 77vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Tangerine', cursive;
+}
+div#header {
+    font-size: 11vh;
+    width: 100%;
+    margin: 32vh auto 0 auto;
+    text-align: center;
+    float: left;
+}
+div#bottomline {
+    font-size: 5vh;
+    margin: auto;
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+.section{
+    height: 100vh; /* For 100% screen height */
+    width:  100vw; /* For 100% screen width */
+}
+
+#invitation{
+    background-image: url('/static/sitesapp/elegant-eucalipt/background-top.png'), url('/static/sitesapp/elegant-eucalipt/background-right.png'),url('/static/sitesapp/elegant-eucalipt/background-bottom.png'),url('/static/sitesapp/elegant-eucalipt/background-left.png');
+    background-position: top, right,bottom,left;
+    background-repeat: no-repeat, no-repeat,no-repeat,no-repeat;
+    background-size: 100vw,30vh;
+  }
+  #confirmation{
+    background-image: url('/static/sitesapp/elegant-eucalipt/background-top-flipped.png'), url('/static/sitesapp/elegant-eucalipt/background-right.png'),url('/static/sitesapp/elegant-eucalipt/background-bottom-flipped.png'),url('/static/sitesapp/elegant-eucalipt/background-left.png');
+    background-position: bottom, right,top,left;
+    background-repeat: no-repeat, no-repeat,no-repeat,no-repeat;
+    background-size: 100vw,30vh;
+  }
+
+.contents{
+
+    padding: 36vw 10vh;
+}
+.title {
+    font-family: 'Tangerine', cursive;
+    font-size: 7vh;
+    text-align: center;
+}
+.description {
+    font-family: 'Tangerine', cursive;
+    font-size: 5vh;
+    text-align: center;
+}
+#confirmation input {
+    width: 45vw;
+    height: 10vh;
+    margin: 10px;
+    border-block-color: black;
+    background-color: darkseagreen;
+    border-style: none;
+    font-family: 'Tangerine', cursive;
+    font-size: 4vh;
+}
+#confirmation input.selected {
+    border-style: groove;
+}
+#confirmation .contents{
+    padding: 20vw 10vh;
+}

@@ -1,0 +1,13 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% get_static_prefix %}{{site.theme}}/style.css"> 
+{% if sites %}
+<ul> {% for site in sites %}
+    <li>
+        <a href="{{ site.name }}">{{ site.name}}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No se han agregado Sitios.</p>
+{% endif %}
