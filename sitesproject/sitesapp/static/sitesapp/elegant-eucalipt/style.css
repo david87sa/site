@@ -4,14 +4,21 @@ body{
 }
 
 img{
-    width: 100vw;
+    width: inherit;
 }
-#home{
+p{
+    margin: 2vh;
+}form {
+    margin: 0vh;
+}
+.squarebackground{
     background-image: url('/static/sitesapp/elegant-eucalipt/home.png');
     background-size: 77vh;
     background-repeat: no-repeat;
     background-position: center;
     font-family: 'Tangerine', cursive;
+    height: 100vh;
+    width: 100vw;
 }
 div#header {
     font-size: 11vh;
@@ -31,6 +38,17 @@ div#bottomline {
 .section{
     height: 100vh; /* For 100% screen height */
     width:  100vw; /* For 100% screen width */
+    position: absolute;
+    transition: opacity 2s;
+    transition-timing-function: ease-in;
+
+}
+.hidden{
+    opacity: 0;
+}
+.visible{
+    opacity: 1;
+    z-index: 1;
 }
 
 #invitation{
@@ -48,7 +66,8 @@ div#bottomline {
 
 .contents{
 
-    padding: 36vw 10vh;
+    padding: 29vw 9vh;
+    text-align: center;
 }
 .title {
     font-family: 'Tangerine', cursive;
@@ -69,10 +88,16 @@ div#bottomline {
     border-style: none;
     font-family: 'Tangerine', cursive;
     font-size: 4vh;
+
 }
 #confirmation input.selected {
     border-style: groove;
 }
 #confirmation .contents{
     padding: 20vw 10vh;
+}
+.framedphoto img{ 
+    margin: 30vh 0 0 10.7vw;
+    float: left;
+    height: 42vh;
 }

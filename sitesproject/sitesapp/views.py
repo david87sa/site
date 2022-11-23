@@ -42,9 +42,8 @@ class SiteDetail(View):
 
         self.guest.confirmed=data.get('confirmed')
         self.guest.save()
-        return HttpResponseRedirect('/sitesapp/invitation/'+str(self.guest.id))
 
-        #return render(request, 'sitesapp/response.html', {'form': form})
+        return render(request, 'sitesapp/response.html', {'response': self.guest.confirmed})
 
 
 class ContactFormView(FormView):

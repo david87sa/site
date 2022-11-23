@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="{% get_static_prefix %}/sitesapp/{{sitetheme}}/style.css"> 
 {% if sections %}
 <div id="main_container"> {% for section in sections %}
-    <div id="{{ section.name }}" class="section">
+    <div id="{{ section.name }}" class="section {% if section.id == 1 %}visible{% else %}hidden{% endif %}">
         {% with "sitesapp/sections/"|add:section.renderer.name|add:"/"|add:section.renderer.templatePath as template %}
         {% include template %}
         {% endwith %}
@@ -13,3 +13,4 @@
 {% else %}
 <p>No se han agregado secciones.</p>
 {% endif %}
+<script src="{% get_static_prefix %}/sitesapp/{{sitetheme}}/script.js"> </script>
