@@ -1,6 +1,12 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% get_static_prefix %}/sitesapp/{{sitetheme}}/style.css"> 
+<title>David y Hellen, nos casamos!</title>
+<meta name="description" content="Queremos invitarte a nuestra boda" />
+<meta property="og:title" content="David y Hellen, nos casamos!" />
+<meta property="og:image" content="https://photos.app.goo.gl/skWxs6AqXh8KQBKR8">
+
+
 {% if sections %}
 <div id="main_container"> {% for section in sections %}
     <div id="{{ section.name }}" class="section {% if section.id == 1 %}visible{% else %}hidden{% endif %}">
