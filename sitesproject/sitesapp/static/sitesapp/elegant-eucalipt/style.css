@@ -50,6 +50,12 @@ div#bottomline {
     opacity: 1;
     z-index: 1;
 }
+.squarebackground .hidden{
+    display: none;
+}
+.squarebackground .visible{
+    display: block;
+}
 
 #invitation{
     background-image: url('/static/sitesapp/elegant-eucalipt/background-top.png'), url('/static/sitesapp/elegant-eucalipt/background-right.png'),url('/static/sitesapp/elegant-eucalipt/background-bottom.png'),url('/static/sitesapp/elegant-eucalipt/background-left.png');
@@ -100,4 +106,14 @@ div#bottomline {
     margin: 30vh 0 0 10.7vw;
     float: left;
     height: 42vh;
+}
+.phrase-cute {
+    font-size: 8vw;
+    float: left;
+    width: 71vw;
+    margin: 5vh 15vw;
+    text-align: center;
+}
+#phrase-5-2{
+    font-size:12vw;
 }

@@ -70,6 +70,14 @@ function changeSection(from,to){
     sections[from].classList.add('hidden');
     sections[to].classList.remove('hidden');
     sections[to].classList.add('visible');
+    if(to == 3 ){
+        document.getElementById("phrase-4").classList.add("visible");
+        document.getElementById("phrase-4-2").classList.remove("visible");
+    }
+    if(to == 4 ){
+        document.getElementById("phrase-5").classList.remove("visible");
+        document.getElementById("phrase-5-2").classList.add("visible");
+    }
     currentSection=to;
     window.setTimeout(scheduler,5000)
 
