@@ -103,15 +103,15 @@ div#bottomline {
     padding: 20vw 10vh;
 }
 .framedphoto img{ 
-    margin: 30vh 0 0 10.7vw;
+    margin: 5vh 0 0 9vw;
     float: left;
-    height: 42vh;
+    height: 44vh;
 }
 .phrase-cute {
     font-size: 5vh;
     float: left;
-    width: 85vw;
-    margin: 5vh 10vw;
+    width: 100vw;
+    margin: 14vh 0vw 0 0vw;
     text-align: center;
 }
 #phrase-5-2{

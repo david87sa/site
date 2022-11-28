@@ -54,31 +54,24 @@ window.addEventListener("load", () => {
     });
   });
 
-
-
-/*for (i=0;i<sections.length;++i){
-    sections[i].addEventListener('click',function(){
-        nextSection = currentSection +1;
-        if(nextSection>=sections.length){
-            nextSection=0
-        }
-        changeSection(currentSection,nextSection)
-    });
-}*/
 function changeSection(from,to){
     sections[from].classList.remove('visible');
     sections[from].classList.add('hidden');
     sections[to].classList.remove('hidden');
-    sections[to].classList.add('visible');
+    sections[to].classList.add('visible'); 
+    currentSection=to;
+    if(to==2){
+        return;
+    }
     if(to == 3 ){
         document.getElementById("phrase-4").classList.add("visible");
-        document.getElementById("phrase-4-2").classList.remove("visible");
+        document.getElementById("phrase-4-2").classList.remove("visible"); 
     }
     if(to == 4 ){
         document.getElementById("phrase-5").classList.remove("visible");
         document.getElementById("phrase-5-2").classList.add("visible");
-    }
-    currentSection=to;
+    }   
+
     window.setTimeout(scheduler,5000)
 
 }
@@ -87,9 +80,6 @@ var scheduler = function(){
     nextSection = currentSection +1;
     if(nextSection>=sections.length){
         nextSection=0;
-    }
-    if(currentSection==2){
-        return;
     }
 
     changeSection(currentSection,nextSection)
