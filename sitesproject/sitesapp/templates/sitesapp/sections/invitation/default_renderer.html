@@ -1,6 +1,6 @@
 <div class="contents">
     <div class="title">
-        Hola {{guest}}, <br>Queremos invitarte a<br> nuestra boda.<br>
+        Hola {{guest}}, <br>Queremos {% if guest.places > 1 %} invitales {% else %}invitarte{% endif %} a<br> nuestra boda.<br>
     </div><div class="description">
         Te guardamos {{guest.places}} {% if guest.places > 1 %} lugares {% else %}lugar{% endif %}<br>Así que desde ya reserva <br>el próximo 7 de Enero<br>a las 2 p.m. 
     </div>
