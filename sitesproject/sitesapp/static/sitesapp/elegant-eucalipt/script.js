@@ -72,7 +72,7 @@ function changeSection(from,to){
         document.getElementById("phrase-5-2").classList.add("visible");
     }   
 
-    window.setTimeout(scheduler,5000)
+    window.setTimeout(scheduler,10000)
 
 }
 var scheduler = function(){
@@ -84,4 +84,4 @@ var scheduler = function(){
 
     changeSection(currentSection,nextSection)
 }
-window.setTimeout(scheduler,5000)
+window.setTimeout(scheduler,10000)
