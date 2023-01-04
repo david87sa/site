@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1080px) {
 
     div{
         max-width: 600px;
