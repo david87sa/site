@@ -84,4 +84,4 @@ var scheduler = function(){
 
     changeSection(currentSection,nextSection)
 }
-window.setTimeout(scheduler,10000)
+window.setTimeout(scheduler,7000)
