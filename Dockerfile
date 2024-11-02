@@ -19,6 +19,8 @@ RUN apk add git
 RUN rm -rf site
 RUN git clone https://github.com/david87sa/site.git
 
+COPY sitesproject/sitesproject/settings-prod.py /code/site/sitesproject/sitesproject/settings.py
+
 WORKDIR site/sitesproject/
 ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0 "
 #CMD ["python", "manage.py", "migrate"]
