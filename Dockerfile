@@ -13,9 +13,14 @@ COPY . /code
 
 EXPOSE 8000
 
+
+
+RUN apk add git
+RUN rm -rf site
+RUN git clone https://github.com/david87sa/site.git
+
 WORKDIR site/sitesproject/
 ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0 "
 #CMD ["python", "manage.py", "migrate"]
 
-CMD ["/usr/sbin/sshd", "-D"] 
 CMD ["gunicorn","sitesproject.wsgi"]
