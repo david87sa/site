@@ -81,7 +81,7 @@ DATABASES = {
         'PASSWORD': 'Sites1234!',
         'NAME':'sts',
         'HOST':'192.168.2.202',
-        'port':'3307'
+        'PORT':'3307'
     }
 }
 
