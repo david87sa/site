@@ -26,11 +26,13 @@ ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0 "
 #CMD ["python", "manage.py", "migrate"]
 
 COPY gunicorn/start.sh .
+COPY setup.sh .
 RUN chmod +x start.sh
+RUN chmod +x setup.sh
 
 
 RUN apk add nginx
 RUN apk add openrc --no-cache
 
 
-CMD ["start.sh","cp /code/site/sitesproject/sites /etc/nginx/sites-enabled/sites","ln -s /etc/nginx/sites-available/sites /etc/nginx/sites-enabled/sites","touch /run/openrc/softlevel","rc-service nginx start"]
+CMD ["/code/site/sitesproject/setup.sh"]
