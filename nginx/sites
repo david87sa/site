@@ -3,21 +3,21 @@ upstream hello_app_server {
   # to return a good HTTP response (in case the Unicorn master nukes a
   # single worker for timing out).
 
-  server unix:/webapps/hello_django/run/gunicorn.sock fail_timeout=0;
+  server unix:/code/site/sitesproject/run/gunicorn.sock fail_timeout=0;
 }
 
 server {
 
-    listen   80;
+    listen   8080;
     server_name 192.168.2.202;
 
     client_max_body_size 4G;
 
-    access_log /code/sites/logs/nginx-access.log;
-    error_log /code/sites/logs/nginx-error.log;
+    access_log /code/site/logs/nginx-access.log;
+    error_log /code/site/logs/nginx-error.log;
 
     location /static/ {
-        alias   /code/sites/sitesproject/sitesapp/static/;
+        alias   /code/site/sitesproject/sitesapp/static/;
     }
 
     location /media/ {
@@ -59,6 +59,6 @@ server {
     # Error pages
     error_page 500 502 503 504 /500.html;
     location = /500.html {
-        root /code/sites/sitesproject/sitesapp/static/;
+        root /code/site/sitesproject/sitesapp/static/;
     }
 }

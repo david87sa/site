@@ -1,7 +1,8 @@
 #!/bin/sh
 echo "start"
 ./start.sh
-cp /code/site/sitesproject/sites /etc/nginx/sites-enabled/sites
-ln -s /etc/nginx/sites-available/sites /etc/nginx/sites-enabled/sites
+cp /code/site/sitesproject/sites /etc/nginx/http.d/sites.conf
+mkdir /code/site/logs/
+rc-service nginx start
 touch /run/openrc/softlevel
 rc-service nginx start
