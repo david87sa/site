@@ -32,7 +32,6 @@ RUN chmod +x /code/site/sitesproject/setup.sh
 
 
 RUN apk add nginx
-RUN apk add openrc --no-cache
 
 
 CMD ["/code/site/sitesproject/setup.sh"]
