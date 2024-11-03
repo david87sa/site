@@ -26,9 +26,9 @@ ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0 "
 #CMD ["python", "manage.py", "migrate"]
 
 COPY gunicorn/start.sh .
-COPY setup.sh .
+COPY setup.sh /code/site/sitesproject/setup.sh
 RUN chmod +x start.sh
-RUN chmod +x setup.sh
+RUN chmod +x /code/site/sitesproject/setup.sh
 
 
 RUN apk add nginx
